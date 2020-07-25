@@ -9,7 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "bigojs": "^0.1.11",
+    "bigojs": "^0.1.12",
     "mime-types": "^2.1.27"
   },
   "devDependencies": {
