@@ -1,0 +1,36 @@
+<div id="Home">
+
+  <div class="posts">
+    <h1 class="content-subhead">Recent Posts</h1>
+
+    {{#articles}}
+    <section class="post">
+      <header class="post-header">
+        <h2 class="post-title">{{title}}</h2>
+
+        <p class="post-meta">
+          By <a class="post-author" href="#">{{author}}</a> under 
+          {{#tags}}
+          <a class="post-category" href="#">{{.}}</a>
+          {{/tags}}
+        </p>
+      </header>
+
+      <div class="post-description">
+        <p>
+          {{{description}}}
+        </p>
+      </div>
+    </section>
+    {{/articles}}
+  </div>
+
+  <div class="footer">
+    <div class="pure-menu pure-menu-horizontal">
+      <ul>
+        <li class="pure-menu-item"><a href="https://github.com/fabrv/bigojs/README.md" class="pure-menu-link">About</a></li>
+        <li class="pure-menu-item"><a href="https://github.com/fabrv/bigojs" class="pure-menu-link">GitHub</a></li>
+      </ul>
+    </div>
+  </div>
+</div>

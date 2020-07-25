@@ -3,8 +3,8 @@ import fs from 'fs'
 import path from 'path'
 import mime from 'mime-types'
 import { Request } from 'bigojs'
-import { HomeComponent } from './pages/Home/Home'
-import { MasterComponent } from './pages/Master/Master'
+import { HomeComponent } from './components/Home/Home'
+import { MasterComponent } from './components/Master/Master'
 
 const host: string = '127.0.0.1'
 const port: number = 3000
@@ -12,7 +12,7 @@ const port: number = 3000
 const server: http.Server = http.createServer((req, res) => {
   const bigoReq = new Request(req)
 
-  switch(bigoReq.method) {
+  switch(req.method) {
     case 'GET':
       switch (bigoReq.route[0]) {
         case 'article':
