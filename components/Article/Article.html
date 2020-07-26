@@ -1,2 +1,22 @@
-<div id="Article">
+<div id="Article" class="post"> 
+  <h1 class="post-title">{{title}}</h1>
+
+  {{#author}}
+  <p class="post-meta">
+    By <a class="post-author" href="#">{{author}}</a> under 
+    {{#tags}}
+    <a class="post-category" href="#">{{.}}</a>
+    {{/tags}}
+  </p>
+  {{/author}}
+
+  <div class="post-description">
+    <p>
+      {{{description}}}
+    </p>
+    <p>
+      {{{content}}}
+    </p>
+  </div>
+  <a class="pure-button" href="/">Read more articles</a>
 </div>
