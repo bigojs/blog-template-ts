@@ -27,7 +27,7 @@ export class ArticleComponent extends Component<ArticleInterface> {
     )
     if (article) {
       viewData.title = article.title
-      viewData.author= article.author
+      viewData.author = article.author
       viewData.tags = article.tags
       viewData.description = article.description
       viewData.content = article.content
