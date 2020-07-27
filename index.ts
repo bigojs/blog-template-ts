@@ -14,11 +14,11 @@ const port: number = 3001
 const server: http.Server = http.createServer((req, res) => {
   const bigoReq = new Request(req)
 
+  // Routing
   switch(req.method) {
     case 'GET':
       switch (bigoReq.route[0]) {
         case 'article':
-          debugger;
           const articlePage = new ArticleComponent(bigoReq.route[1]).render()
           res.writeHead(200, { 'Content-Type': 'text/html' })
           res.end(new MasterComponent({page: articlePage}).render(), 'utf-8')
@@ -29,6 +29,7 @@ const server: http.Server = http.createServer((req, res) => {
           res.end(new MasterComponent({page: homePage}).render(), 'utf-8')
         break
 
+        // Returning static files from the `/static` folder
         default:
           let filePath: string = 'static' + req.url
           if (filePath === 'static/') {
